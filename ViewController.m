@@ -7,18 +7,25 @@
 //
 
 #import "ViewController.h"
-
+#import "testView.h"
 @interface ViewController ()
-
+{
+    testView *viewTest;
+}
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _lbTest.text=@"大发发回复我剪短发是否为其蜂王浆而服务嗯哼i 额外分为把附件为方便玩家为分为wefew微积分i112";
-     _lbTest2.text=@"大发发回复我剪短发是否为其蜂王浆而服务嗯哼i 额外分为把附件为方便玩家为分为wefew微积分i112";
-    NSLog(@"%lf",[_viewTest compressedHeight:0]);
+    viewTest=[[[NSBundle mainBundle] loadNibNamed:@"testView" owner:nil options:nil] lastObject];
+    viewTest.translatesAutoresizingMaskIntoConstraints=YES;
+    viewTest.lbTest.text=@"大发发回复我剪短发是否为其蜂王浆而服务嗯哼i 额外分为把附件为方便玩家为分为wefew微积分i112";
+    viewTest.lbTest2.text=@"大发发回复我剪短发是否为其蜂王浆而服务嗯哼i 额外分为把附件为方便玩家为分为wefew微积分i112";
+    CGFloat height=[viewTest compressedHeight:0];
+    viewTest.frame=CGRectMake(0, 0, viewTest.bounds.size.width, height);
+    viewTest.autoresizingMask=UIViewAutoresizingFlexibleWidth;
+    [self.view addSubview:viewTest];
 }
 
 - (void)didReceiveMemoryWarning {
