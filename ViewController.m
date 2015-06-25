@@ -16,7 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    _lbTest.text=@"大发发回复我剪短发是否为其蜂王浆而服务嗯哼i 额外分为把附件为方便玩家为分为wefew微积分i112";
+     _lbTest2.text=@"大发发回复我剪短发是否为其蜂王浆而服务嗯哼i 额外分为把附件为方便玩家为分为wefew微积分i112";
+    NSLog(@"%lf",[_viewTest compressedHeight:0]);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -25,3 +27,10 @@
 }
 
 @end
+
+
+
+
+
+
+

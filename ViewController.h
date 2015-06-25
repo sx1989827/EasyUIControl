@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "EasyUIView.h"
 @interface ViewController : UIViewController
+@property (strong, nonatomic) IBOutlet EasyUIView *viewTest;
+@property (strong, nonatomic) IBOutlet UILabel *lbTest;
+@property (strong, nonatomic) IBOutlet UILabel *lbTest2;
 
 
 @end
