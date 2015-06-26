@@ -25,6 +25,15 @@
     CGFloat height=[viewTest compressedHeight:0];
     viewTest.frame=CGRectMake(0, 0, viewTest.bounds.size.width, height);
     viewTest.autoresizingMask=UIViewAutoresizingFlexibleWidth;
+    viewTest.bkImgView.image=[UIImage imageNamed:@"Image"];
+    UILabel *lb=[[UILabel alloc] initWithFrame:CGRectMake(0, 0, 30, 0)];
+    lb.text=@"123";
+    lb.backgroundColor=[UIColor lightGrayColor];
+    viewTest.leftView=lb;
+    lb=[[UILabel alloc] initWithFrame:CGRectMake(0, 0, 50, 0)];
+    lb.text=@"fwee";
+    lb.backgroundColor=[UIColor lightTextColor];
+    viewTest.rightView=lb;
     [self.view addSubview:viewTest];
 }
 

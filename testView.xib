@@ -24,14 +24,19 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5G-oe-uiV">
-                    <rect key="frame" x="119" y="170" width="46" height="30"/>
-                    <state key="normal" title="Button">
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5G-oe-uiV" customClass="EasyUIButton">
+                    <rect key="frame" x="119" y="170" width="151" height="30"/>
+                    <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="sxsxsx1"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="onClick:" destination="mcn-2b-hfR" eventType="touchUpInside" id="K8Q-7l-5e9"/>
+                    </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="wSC-Ha-QLb" secondAttribute="trailing" constant="78" id="8Mc-Ns-sgz"/>
                 <constraint firstAttribute="bottom" secondItem="c6u-Tb-CZB" secondAttribute="bottom" constant="100" id="IXJ-Mg-pQh"/>
@@ -42,7 +47,7 @@
                 <constraint firstAttribute="bottom" secondItem="R5G-oe-uiV" secondAttribute="bottom" id="lVT-kW-0RE"/>
                 <constraint firstItem="R5G-oe-uiV" firstAttribute="leading" secondItem="mcn-2b-hfR" secondAttribute="leading" constant="119" id="oKX-9H-LWK"/>
                 <constraint firstAttribute="height" constant="200" id="oq6-R1-iQw"/>
-                <constraint firstAttribute="trailing" secondItem="R5G-oe-uiV" secondAttribute="trailing" constant="155" id="rg0-yq-Qsc"/>
+                <constraint firstAttribute="trailing" secondItem="R5G-oe-uiV" secondAttribute="trailing" constant="50" id="rg0-yq-Qsc"/>
                 <constraint firstItem="wSC-Ha-QLb" firstAttribute="leading" secondItem="mcn-2b-hfR" secondAttribute="leading" constant="54" id="t7i-Q7-opi"/>
                 <constraint firstItem="R5G-oe-uiV" firstAttribute="top" secondItem="wSC-Ha-QLb" secondAttribute="bottom" constant="4" id="vf9-aD-2HV"/>
                 <constraint firstItem="c6u-Tb-CZB" firstAttribute="top" secondItem="mcn-2b-hfR" secondAttribute="top" constant="52" id="xvJ-Wk-MPI"/>
@@ -60,6 +65,7 @@
                 </mask>
             </variation>
             <connections>
+                <outlet property="btnTest" destination="R5G-oe-uiV" id="hq1-j5-sUv"/>
                 <outlet property="lbTest" destination="c6u-Tb-CZB" id="JYd-sl-e0g"/>
                 <outlet property="lbTest2" destination="wSC-Ha-QLb" id="1UX-B9-oYk"/>
             </connections>

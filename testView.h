@@ -6,9 +6,12 @@
 //  Copyright (c) 2015年 孙昕. All rights reserved.
 //
 
-#import "EasyUIView.h"
+#import "EasyUIControl.h"
 
 @interface testView : EasyUIView
 @property (strong, nonatomic) IBOutlet UILabel *lbTest;
 @property (strong, nonatomic) IBOutlet UILabel *lbTest2;
+@property (strong, nonatomic) IBOutlet EasyUIButton *btnTest;
+- (IBAction)onClick:(id)sender;
+
 @end

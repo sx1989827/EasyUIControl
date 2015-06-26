@@ -18,4 +18,18 @@
 }
 */
 
+- (IBAction)onClick:(id)sender
+{
+    [_btnTest setTitle:@"fd" forState:UIControlStateNormal];
+}
 @end
+
+
+
+
+
+
+
+
+
+

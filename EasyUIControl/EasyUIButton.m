@@ -1,25 +1,23 @@
 //
-//  EasyUIView.m
+//  EasyUIButton.m
 //  EasyUIControl
 //
-//  Created by 孙昕 on 15/6/25.
+//  Created by 孙昕 on 15/6/26.
 //  Copyright (c) 2015年 孙昕. All rights reserved.
 //
 
-#import "EasyUIView.h"
-@interface EasyUIView()
+#import "EasyUIButton.h"
+@interface EasyUIButton()
 {
     CGFloat radiusView;
     CGFloat borderWidthView;
     UIColor* borderColorView;
     UILabel *viewTopGap;
     UILabel *viewBottomGap;
-    UIImageView *bkImgView;
-    UIView *viewLeft;
-    UIView *viewRight;
+    UILabel *lbPlaceholder;
 }
 @end
-@implementation EasyUIView
+@implementation EasyUIButton
 -(instancetype)init
 {
     if(self=[super init])
@@ -63,10 +61,28 @@
     [self addSubview:viewBottomGap];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[viewBottomGap]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(viewBottomGap)]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[viewBottomGap(==1)]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(viewBottomGap)]];
-    bkImgView=[[UIImageView alloc] initWithFrame:self.bounds];
-    bkImgView.autoresizingMask=UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
-    [self addSubview:bkImgView];
-    [self sendSubviewToBack:bkImgView];
+    lbPlaceholder=[[UILabel alloc] initWithFrame:self.bounds];
+    lbPlaceholder.backgroundColor=[UIColor clearColor];
+    lbPlaceholder.autoresizingMask=UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+    lbPlaceholder.textColor=[UIColor lightGrayColor];
+    if(self.contentMode==UIViewContentModeLeft)
+    {
+        lbPlaceholder.textAlignment=NSTextAlignmentLeft;
+    }
+    else if(self.contentMode==UIViewContentModeCenter)
+    {
+        lbPlaceholder.textAlignment=NSTextAlignmentCenter;
+    }
+    else if(self.contentMode==UIViewContentModeRight)
+    {
+        lbPlaceholder.textAlignment=NSTextAlignmentRight;
+    }
+    else
+    {
+        lbPlaceholder.textAlignment=NSTextAlignmentCenter;
+    }
+    lbPlaceholder.font=[UIFont systemFontOfSize:self.titleLabel.font.pointSize];
+    [self addSubview:lbPlaceholder];
 }
 
 -(CGFloat)radius
@@ -126,60 +142,44 @@
     viewBottomGap.hidden=!bBottomGap;
 }
 
--(UIView*)leftView
+
+-(NSString*)placeholder
 {
-    return viewLeft;
+    return lbPlaceholder.text;
 }
 
--(void)setLeftView:(UIView *)leftView
+-(void)setPlaceholder:(NSString *)placeholder
 {
-    [self addSubview:leftView];
-    leftView.frame=CGRectMake(0, 0, leftView.bounds.size.width, self.bounds.size.height);
-    leftView.autoresizingMask=UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleRightMargin;
-    viewLeft=leftView;
-}
-
--(UIView*)rightView
-{
-    return viewRight;
-}
-
--(void)setRightView:(UIView *)rightView
-{
-    [self addSubview:rightView];
-    rightView.frame=CGRectMake(self.bounds.size.width-rightView.bounds.size.width, 0, rightView.bounds.size.width, self.bounds.size.height);
-    rightView.autoresizingMask=UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleLeftMargin;
-    viewRight=rightView;
-}
-
--(CGFloat)compressedHeight:(CGFloat)gap
-{
-    NSInteger count=0;
-    for(UIView *view in self.subviews)
+    lbPlaceholder.text=placeholder;
+    if([[self titleForState:UIControlStateNormal] isEqualToString:@""] || [self titleForState:UIControlStateNormal]==nil)
     {
-        if([view isKindOfClass:[UILabel class]])
-        {
-            UILabel *lb=(UILabel*)view;
-            if(lb.numberOfLines==0)
-            {
-                count++;
-                lb.preferredMaxLayoutWidth=[UIScreen mainScreen].bounds.size.width-(self.bounds.size.width-lb.bounds.size.width+gap);
-            }
-        }
+        lbPlaceholder.hidden=NO;
     }
-    CGFloat height=[self systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
-    if(count>1)
+    else
     {
-        height++;
+        lbPlaceholder.hidden=YES;
     }
-    return height;
 }
 
--(UIImageView*)bkImgView
+-(void)setTitle:(NSString *)title forState:(UIControlState)state
 {
-    return bkImgView;
+    [super setTitle:title forState:state];
+    if([title isEqualToString:@""] || title==nil)
+    {
+        lbPlaceholder.hidden=NO;
+    }
+    else
+    {
+        lbPlaceholder.hidden=YES;
+    }
 }
 @end
+
+
+
+
+
+
 
 
 
