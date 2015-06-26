@@ -36,6 +36,8 @@
     viewTest.rightView=lb;
     [viewTest.lbTest3 addText:@"dfdfafd213" Font:[UIFont systemFontOfSize:15] Color:[UIColor redColor] BkColor:nil];
     [viewTest.lbTest3 addText:@"wwwsx" Font:[UIFont systemFontOfSize:18] Color:[UIColor blueColor] BkColor:[UIColor yellowColor]];
+    [viewTest.lbTest3 deleteText];
+    [viewTest.lbTest3 addText:@"fwe" Font:[UIFont systemFontOfSize:18] Color:[UIColor blueColor] BkColor:[UIColor yellowColor]];
     [self.view addSubview:viewTest];
 }
 

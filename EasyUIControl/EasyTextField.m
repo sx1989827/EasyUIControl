@@ -1,23 +1,21 @@
 //
-//  EasyLabel.m
+//  EasyTextField.m
 //  EasyUIControl
 //
 //  Created by 孙昕 on 15/6/26.
 //  Copyright (c) 2015年 孙昕. All rights reserved.
 //
 
-#import "EasyLabel.h"
-@interface EasyLabel()
+#import "EasyTextField.h"
+@interface EasyTextField()
 {
-    CGFloat radiusView;
     CGFloat borderWidthView;
     UIColor* borderColorView;
     UILabel *viewTopGap;
     UILabel *viewBottomGap;
-    NSMutableAttributedString *attrString;
 }
 @end
-@implementation EasyLabel
+@implementation EasyTextField
 -(instancetype)init
 {
     if(self=[super init])
@@ -61,21 +59,8 @@
     [self addSubview:viewBottomGap];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[viewBottomGap]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(viewBottomGap)]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[viewBottomGap(==1)]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(viewBottomGap)]];
-    attrString=[[NSMutableAttributedString alloc] initWithAttributedString:self.attributedText];
 }
 
--(CGFloat)radius
-{
-    return radiusView;
-    
-}
-
--(void)setRadius:(CGFloat)radius
-{
-    self.layer.masksToBounds=YES;
-    self.layer.cornerRadius=radius;
-    radiusView=radius;
-}
 
 -(CGFloat)borderWidth
 {
@@ -121,39 +106,5 @@
     viewBottomGap.hidden=!bBottomGap;
 }
 
--(void)addText:(NSString *)text Font:(UIFont*)font Color:(UIColor*)color BkColor:(UIColor*)bkcolor
-{
-    NSMutableAttributedString *attr=[[NSMutableAttributedString alloc] initWithString:text];
-    NSMutableDictionary *dic=[[NSMutableDictionary alloc] initWithCapacity:30];
-    if(font!=nil)
-    {
-        [dic setObject:font forKey:NSFontAttributeName];
-    }
-    if(color!=nil)
-    {
-        [dic setObject:color forKey:NSForegroundColorAttributeName];
-    }
-    if(bkcolor!=nil)
-    {
-        [dic setObject:bkcolor forKey:NSBackgroundColorAttributeName];
-    }
-    [attr addAttributes:dic range:NSMakeRange(0, text.length)];
-    [attrString appendAttributedString:attr];
-    self.attributedText=attrString;
-}
-
--(void)deleteText
-{
-    self.attributedText=nil;
-    self.text=@"";
-    attrString=[[NSMutableAttributedString alloc] initWithAttributedString:self.attributedText];
-}
 
 @end
-
-
-
-
-
-
-

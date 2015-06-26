@@ -1,23 +1,24 @@
 //
-//  EasyLabel.m
+//  EasyTextView.m
 //  EasyUIControl
 //
 //  Created by 孙昕 on 15/6/26.
 //  Copyright (c) 2015年 孙昕. All rights reserved.
 //
 
-#import "EasyLabel.h"
-@interface EasyLabel()
+#import "EasyTextView.h"
+@interface EasyTextView()
 {
     CGFloat radiusView;
     CGFloat borderWidthView;
     UIColor* borderColorView;
     UILabel *viewTopGap;
     UILabel *viewBottomGap;
+    UIImageView *bkImgView;
     NSMutableAttributedString *attrString;
 }
 @end
-@implementation EasyLabel
+@implementation EasyTextView
 -(instancetype)init
 {
     if(self=[super init])
@@ -61,21 +62,12 @@
     [self addSubview:viewBottomGap];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[viewBottomGap]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(viewBottomGap)]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[viewBottomGap(==1)]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(viewBottomGap)]];
-    attrString=[[NSMutableAttributedString alloc] initWithAttributedString:self.attributedText];
+    bkImgView=[[UIImageView alloc] initWithFrame:self.bounds];
+    bkImgView.autoresizingMask=UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+    [self addSubview:bkImgView];
+    [self sendSubviewToBack:bkImgView];
 }
 
--(CGFloat)radius
-{
-    return radiusView;
-    
-}
-
--(void)setRadius:(CGFloat)radius
-{
-    self.layer.masksToBounds=YES;
-    self.layer.cornerRadius=radius;
-    radiusView=radius;
-}
 
 -(CGFloat)borderWidth
 {
@@ -121,7 +113,7 @@
     viewBottomGap.hidden=!bBottomGap;
 }
 
--(void)addText:(NSString *)text Font:(UIFont*)font Color:(UIColor*)color BkColor:(UIColor*)bkcolor
+-(void)addText:(NSString *)text Font:(UIFont*)font Color:(UIColor*)color BkColor:(UIColor*)bkcolor Link:(NSString *)link
 {
     NSMutableAttributedString *attr=[[NSMutableAttributedString alloc] initWithString:text];
     NSMutableDictionary *dic=[[NSMutableDictionary alloc] initWithCapacity:30];
@@ -137,6 +129,10 @@
     {
         [dic setObject:bkcolor forKey:NSBackgroundColorAttributeName];
     }
+    if(link!=nil)
+    {
+        [dic setObject:[NSURL URLWithString:link] forKey:NSLinkAttributeName];
+    }
     [attr addAttributes:dic range:NSMakeRange(0, text.length)];
     [attrString appendAttributedString:attr];
     self.attributedText=attrString;
@@ -149,11 +145,9 @@
     attrString=[[NSMutableAttributedString alloc] initWithAttributedString:self.attributedText];
 }
 
+
+-(UIImageView*)bkImgView
+{
+    return bkImgView;
+}
 @end
-
-
-
-
-
-
-
