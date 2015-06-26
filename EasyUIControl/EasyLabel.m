@@ -1,25 +1,23 @@
 //
-//  EasyUIView.m
+//  EasyLabel.m
 //  EasyUIControl
 //
-//  Created by 孙昕 on 15/6/25.
+//  Created by 孙昕 on 15/6/26.
 //  Copyright (c) 2015年 孙昕. All rights reserved.
 //
 
-#import "EasyUIView.h"
-@interface EasyUIView()
+#import "EasyLabel.h"
+@interface EasyLabel()
 {
     CGFloat radiusView;
     CGFloat borderWidthView;
     UIColor* borderColorView;
     UILabel *viewTopGap;
     UILabel *viewBottomGap;
-    UIImageView *bkImgView;
-    UIView *viewLeft;
-    UIView *viewRight;
+    NSMutableAttributedString *attrString;
 }
 @end
-@implementation EasyUIView
+@implementation EasyLabel
 -(instancetype)init
 {
     if(self=[super init])
@@ -63,10 +61,7 @@
     [self addSubview:viewBottomGap];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[viewBottomGap]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(viewBottomGap)]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[viewBottomGap(==1)]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(viewBottomGap)]];
-    bkImgView=[[UIImageView alloc] initWithFrame:self.bounds];
-    bkImgView.autoresizingMask=UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
-    [self addSubview:bkImgView];
-    [self sendSubviewToBack:bkImgView];
+    attrString=[[NSMutableAttributedString alloc] initWithAttributedString:self.attributedText];
 }
 
 -(CGFloat)radius
@@ -126,60 +121,27 @@
     viewBottomGap.hidden=!bBottomGap;
 }
 
--(UIView*)leftView
+-(void)addText:(NSString *)text Font:(UIFont*)font Color:(UIColor*)color BkColor:(UIColor*)bkcolor
 {
-    return viewLeft;
-}
-
--(void)setLeftView:(UIView *)leftView
-{
-    [self addSubview:leftView];
-    leftView.frame=CGRectMake(0, 0, leftView.bounds.size.width, self.bounds.size.height);
-    leftView.autoresizingMask=UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleRightMargin;
-    viewLeft=leftView;
-}
-
--(UIView*)rightView
-{
-    return viewRight;
-}
-
--(void)setRightView:(UIView *)rightView
-{
-    [self addSubview:rightView];
-    rightView.frame=CGRectMake(self.bounds.size.width-rightView.bounds.size.width, 0, rightView.bounds.size.width, self.bounds.size.height);
-    rightView.autoresizingMask=UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleLeftMargin;
-    viewRight=rightView;
-}
-
--(CGFloat)compressedHeight:(CGFloat)gap
-{
-    NSInteger count=0;
-    for(UIView *view in self.subviews)
+    NSMutableAttributedString *attr=[[NSMutableAttributedString alloc] initWithString:text];
+    NSMutableDictionary *dic=[[NSMutableDictionary alloc] initWithCapacity:30];
+    if(font!=nil)
     {
-        if([view isKindOfClass:[UILabel class]])
-        {
-            UILabel *lb=(UILabel*)view;
-            if(lb.numberOfLines==0)
-            {
-                count++;
-                lb.preferredMaxLayoutWidth=[UIScreen mainScreen].bounds.size.width-(self.bounds.size.width-lb.bounds.size.width+gap);
-                lb.lineBreakMode=NSLineBreakByCharWrapping;
-            }
-        }
+        [dic setObject:font forKey:NSFontAttributeName];
     }
-    CGFloat height=[self systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
-    if(count>1)
+    if(color!=nil)
     {
-        height++;
+        [dic setObject:color forKey:NSForegroundColorAttributeName];
     }
-    return height;
+    if(bkcolor!=nil)
+    {
+        [dic setObject:bkcolor forKey:NSBackgroundColorAttributeName];
+    }
+    [attr addAttributes:dic range:NSMakeRange(0, text.length)];
+    [attrString appendAttributedString:attr];
+    self.attributedText=attrString;
 }
 
--(UIImageView*)bkImgView
-{
-    return bkImgView;
-}
 @end
 
 

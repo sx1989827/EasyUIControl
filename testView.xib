@@ -36,12 +36,31 @@
                         <action selector="onClick:" destination="mcn-2b-hfR" eventType="touchUpInside" id="K8Q-7l-5e9"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ltv-oc-ejY" customClass="EasyLabel">
+                    <rect key="frame" x="54" y="8" width="188" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="fwS-vf-tXK"/>
+                    </constraints>
+                    <attributedString key="attributedText">
+                        <fragment content="111">
+                            <attributes>
+                                <color key="NSColor" red="0.90247224506578949" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="wSC-Ha-QLb" secondAttribute="trailing" constant="78" id="8Mc-Ns-sgz"/>
+                <constraint firstItem="Ltv-oc-ejY" firstAttribute="top" secondItem="mcn-2b-hfR" secondAttribute="top" constant="8" id="8e1-ii-Ol7"/>
                 <constraint firstAttribute="bottom" secondItem="c6u-Tb-CZB" secondAttribute="bottom" constant="100" id="IXJ-Mg-pQh"/>
                 <constraint firstAttribute="trailing" secondItem="c6u-Tb-CZB" secondAttribute="trailing" constant="78" id="J13-O3-naJ"/>
                 <constraint firstAttribute="bottom" secondItem="wSC-Ha-QLb" secondAttribute="bottom" constant="34" id="P12-OC-pbv"/>
+                <constraint firstItem="Ltv-oc-ejY" firstAttribute="leading" secondItem="mcn-2b-hfR" secondAttribute="leading" constant="54" id="QCD-vj-f0h"/>
+                <constraint firstAttribute="trailing" secondItem="Ltv-oc-ejY" secondAttribute="trailing" constant="78" id="RrD-X8-KSS"/>
                 <constraint firstItem="wSC-Ha-QLb" firstAttribute="top" secondItem="c6u-Tb-CZB" secondAttribute="bottom" constant="18" id="bi9-Px-ihj"/>
                 <constraint firstItem="c6u-Tb-CZB" firstAttribute="leading" secondItem="mcn-2b-hfR" secondAttribute="leading" constant="54" id="kyu-WN-FPK"/>
                 <constraint firstAttribute="bottom" secondItem="R5G-oe-uiV" secondAttribute="bottom" id="lVT-kW-0RE"/>
@@ -66,8 +85,9 @@
             </variation>
             <connections>
                 <outlet property="btnTest" destination="R5G-oe-uiV" id="hq1-j5-sUv"/>
-                <outlet property="lbTest" destination="c6u-Tb-CZB" id="JYd-sl-e0g"/>
+                <outlet property="lbTest" destination="c6u-Tb-CZB" id="Bom-T5-9ER"/>
                 <outlet property="lbTest2" destination="wSC-Ha-QLb" id="1UX-B9-oYk"/>
+                <outlet property="lbTest3" destination="Ltv-oc-ejY" id="8m1-Xl-dfv"/>
             </connections>
             <point key="canvasLocation" x="179" y="106"/>
         </view>

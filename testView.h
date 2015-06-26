@@ -13,5 +13,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *lbTest2;
 @property (strong, nonatomic) IBOutlet EasyUIButton *btnTest;
 - (IBAction)onClick:(id)sender;
+@property (strong, nonatomic) IBOutlet EasyLabel *lbTest3;
 
 @end

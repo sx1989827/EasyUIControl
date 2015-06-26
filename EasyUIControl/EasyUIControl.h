@@ -10,4 +10,5 @@
 #define EasyUIControl_Header_h
 #import "EasyUIView.h"
 #import "EasyUIButton.h"
+#import "EasyLabel.h"
 #endif
