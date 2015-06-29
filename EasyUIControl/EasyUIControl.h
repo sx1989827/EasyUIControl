@@ -11,4 +11,6 @@
 #import "EasyUIView.h"
 #import "EasyUIButton.h"
 #import "EasyLabel.h"
+#import "EasyTextField.h"
+#import "EasyTextView.h"
 #endif
