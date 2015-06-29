@@ -8,6 +8,8 @@
   集成很简单，将本工程下的EasyUIControl文件夹放入你的工程里即可。
   
 ## 如何使用
-  你可以代码创建，也可以用xib创建，使用xib时，比如你拖入一个button，将button的Custom Class改为EasyButton即可。
+  你可以代码创建，也可以用xib创建，使用xib时，比如你拖入一个button，将button的Custom  Class改为EasyButton即可。对于控件里的属性，你可以在User Defined Runtime Attributes里直接设置，无须编写代码。
   
-## API概述
+  
+  
+
