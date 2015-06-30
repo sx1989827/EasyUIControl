@@ -10,21 +10,18 @@
 		B59218521B3BDA0D000BAF0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B59218511B3BDA0D000BAF0B /* main.m */; };
 		B59218551B3BDA0D000BAF0B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B59218541B3BDA0D000BAF0B /* AppDelegate.m */; };
 		B59218581B3BDA0D000BAF0B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B59218571B3BDA0D000BAF0B /* ViewController.m */; };
-		B592185B1B3BDA0D000BAF0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B59218591B3BDA0D000BAF0B /* Main.storyboard */; };
 		B592185D1B3BDA0D000BAF0B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B592185C1B3BDA0D000BAF0B /* Images.xcassets */; };
 		B59218601B3BDA0D000BAF0B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B592185E1B3BDA0D000BAF0B /* LaunchScreen.xib */; };
-		B592186C1B3BDA0D000BAF0B /* EasyUIControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B592186B1B3BDA0D000BAF0B /* EasyUIControlTests.m */; };
+		B59218781B3BE0FA000BAF0B /* EasyUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = B59218771B3BE0FA000BAF0B /* EasyUIView.m */; };
+		B592187B1B3C1320000BAF0B /* testView.m in Sources */ = {isa = PBXBuildFile; fileRef = B592187A1B3C1320000BAF0B /* testView.m */; };
+		B592187D1B3C132F000BAF0B /* testView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B592187C1B3C132F000BAF0B /* testView.xib */; };
+		B592187F1B3C159A000BAF0B /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B592187E1B3C159A000BAF0B /* ViewController.xib */; };
+		B59218831B3CF0C5000BAF0B /* EasyUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B59218821B3CF0C5000BAF0B /* EasyUIButton.m */; };
+		B59218861B3CFBBB000BAF0B /* EasyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B59218851B3CFBBB000BAF0B /* EasyLabel.m */; };
+		B59218891B3D50B7000BAF0B /* EasyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B59218881B3D50B7000BAF0B /* EasyTextField.m */; };
+		B592188C1B3D5135000BAF0B /* EasyTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B592188B1B3D5135000BAF0B /* EasyTextView.m */; };
+		B59218901B3D5181000BAF0B /* PlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B592188F1B3D5181000BAF0B /* PlaceholderTextView.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		B59218661B3BDA0D000BAF0B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B59218441B3BDA0D000BAF0B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B592184B1B3BDA0D000BAF0B;
-			remoteInfo = EasyUIControl;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B592184C1B3BDA0D000BAF0B /* EasyUIControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyUIControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,23 +31,29 @@
 		B59218541B3BDA0D000BAF0B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B59218561B3BDA0D000BAF0B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B59218571B3BDA0D000BAF0B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		B592185A1B3BDA0D000BAF0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B592185C1B3BDA0D000BAF0B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B592185F1B3BDA0D000BAF0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		B59218651B3BDA0D000BAF0B /* EasyUIControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyUIControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B592186A1B3BDA0D000BAF0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B592186B1B3BDA0D000BAF0B /* EasyUIControlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EasyUIControlTests.m; sourceTree = "<group>"; };
+		B59218761B3BE0FA000BAF0B /* EasyUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyUIView.h; sourceTree = "<group>"; };
+		B59218771B3BE0FA000BAF0B /* EasyUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyUIView.m; sourceTree = "<group>"; };
+		B59218791B3C1320000BAF0B /* testView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testView.h; sourceTree = "<group>"; };
+		B592187A1B3C1320000BAF0B /* testView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testView.m; sourceTree = "<group>"; };
+		B592187C1B3C132F000BAF0B /* testView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = testView.xib; sourceTree = "<group>"; };
+		B592187E1B3C159A000BAF0B /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		B59218801B3CEC42000BAF0B /* EasyUIControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyUIControl.h; sourceTree = "<group>"; };
+		B59218811B3CF0C5000BAF0B /* EasyUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyUIButton.h; sourceTree = "<group>"; };
+		B59218821B3CF0C5000BAF0B /* EasyUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyUIButton.m; sourceTree = "<group>"; };
+		B59218841B3CFBBB000BAF0B /* EasyLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyLabel.h; sourceTree = "<group>"; };
+		B59218851B3CFBBB000BAF0B /* EasyLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyLabel.m; sourceTree = "<group>"; };
+		B59218871B3D50B7000BAF0B /* EasyTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyTextField.h; sourceTree = "<group>"; };
+		B59218881B3D50B7000BAF0B /* EasyTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyTextField.m; sourceTree = "<group>"; };
+		B592188A1B3D5135000BAF0B /* EasyTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyTextView.h; sourceTree = "<group>"; };
+		B592188B1B3D5135000BAF0B /* EasyTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyTextView.m; sourceTree = "<group>"; };
+		B592188E1B3D5181000BAF0B /* PlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceholderTextView.h; sourceTree = "<group>"; };
+		B592188F1B3D5181000BAF0B /* PlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceholderTextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B59218491B3BDA0D000BAF0B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B59218621B3BDA0D000BAF0B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -64,7 +67,6 @@
 			isa = PBXGroup;
 			children = (
 				B592184E1B3BDA0D000BAF0B /* EasyUIControl */,
-				B59218681B3BDA0D000BAF0B /* EasyUIControlTests */,
 				B592184D1B3BDA0D000BAF0B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,7 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				B592184C1B3BDA0D000BAF0B /* EasyUIControl.app */,
-				B59218651B3BDA0D000BAF0B /* EasyUIControlTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,11 +82,15 @@
 		B592184E1B3BDA0D000BAF0B /* EasyUIControl */ = {
 			isa = PBXGroup;
 			children = (
+				B59218751B3BDF4A000BAF0B /* EasyUIControl */,
 				B59218531B3BDA0D000BAF0B /* AppDelegate.h */,
 				B59218541B3BDA0D000BAF0B /* AppDelegate.m */,
 				B59218561B3BDA0D000BAF0B /* ViewController.h */,
 				B59218571B3BDA0D000BAF0B /* ViewController.m */,
-				B59218591B3BDA0D000BAF0B /* Main.storyboard */,
+				B592187E1B3C159A000BAF0B /* ViewController.xib */,
+				B59218791B3C1320000BAF0B /* testView.h */,
+				B592187A1B3C1320000BAF0B /* testView.m */,
+				B592187C1B3C132F000BAF0B /* testView.xib */,
 				B592185C1B3BDA0D000BAF0B /* Images.xcassets */,
 				B592185E1B3BDA0D000BAF0B /* LaunchScreen.xib */,
 				B592184F1B3BDA0D000BAF0B /* Supporting Files */,
@@ -102,21 +107,32 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B59218681B3BDA0D000BAF0B /* EasyUIControlTests */ = {
+		B59218751B3BDF4A000BAF0B /* EasyUIControl */ = {
 			isa = PBXGroup;
 			children = (
-				B592186B1B3BDA0D000BAF0B /* EasyUIControlTests.m */,
-				B59218691B3BDA0D000BAF0B /* Supporting Files */,
+				B59218761B3BE0FA000BAF0B /* EasyUIView.h */,
+				B59218771B3BE0FA000BAF0B /* EasyUIView.m */,
+				B59218801B3CEC42000BAF0B /* EasyUIControl.h */,
+				B59218811B3CF0C5000BAF0B /* EasyUIButton.h */,
+				B59218821B3CF0C5000BAF0B /* EasyUIButton.m */,
+				B59218841B3CFBBB000BAF0B /* EasyLabel.h */,
+				B59218851B3CFBBB000BAF0B /* EasyLabel.m */,
+				B59218871B3D50B7000BAF0B /* EasyTextField.h */,
+				B59218881B3D50B7000BAF0B /* EasyTextField.m */,
+				B592188A1B3D5135000BAF0B /* EasyTextView.h */,
+				B592188B1B3D5135000BAF0B /* EasyTextView.m */,
+				B592188D1B3D5181000BAF0B /* PlaceholderTextView */,
 			);
-			path = EasyUIControlTests;
+			path = EasyUIControl;
 			sourceTree = "<group>";
 		};
-		B59218691B3BDA0D000BAF0B /* Supporting Files */ = {
+		B592188D1B3D5181000BAF0B /* PlaceholderTextView */ = {
 			isa = PBXGroup;
 			children = (
-				B592186A1B3BDA0D000BAF0B /* Info.plist */,
+				B592188E1B3D5181000BAF0B /* PlaceholderTextView.h */,
+				B592188F1B3D5181000BAF0B /* PlaceholderTextView.m */,
 			);
-			name = "Supporting Files";
+			path = PlaceholderTextView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,24 +155,6 @@
 			productReference = B592184C1B3BDA0D000BAF0B /* EasyUIControl.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B59218641B3BDA0D000BAF0B /* EasyUIControlTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B59218721B3BDA0D000BAF0B /* Build configuration list for PBXNativeTarget "EasyUIControlTests" */;
-			buildPhases = (
-				B59218611B3BDA0D000BAF0B /* Sources */,
-				B59218621B3BDA0D000BAF0B /* Frameworks */,
-				B59218631B3BDA0D000BAF0B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B59218671B3BDA0D000BAF0B /* PBXTargetDependency */,
-			);
-			name = EasyUIControlTests;
-			productName = EasyUIControlTests;
-			productReference = B59218651B3BDA0D000BAF0B /* EasyUIControlTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -168,10 +166,6 @@
 				TargetAttributes = {
 					B592184B1B3BDA0D000BAF0B = {
 						CreatedOnToolsVersion = 6.3;
-					};
-					B59218641B3BDA0D000BAF0B = {
-						CreatedOnToolsVersion = 6.3;
-						TestTargetID = B592184B1B3BDA0D000BAF0B;
 					};
 				};
 			};
@@ -189,7 +183,6 @@
 			projectRoot = "";
 			targets = (
 				B592184B1B3BDA0D000BAF0B /* EasyUIControl */,
-				B59218641B3BDA0D000BAF0B /* EasyUIControlTests */,
 			);
 		};
 /* End PBXProject section */
@@ -199,16 +192,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B592185B1B3BDA0D000BAF0B /* Main.storyboard in Resources */,
+				B592187D1B3C132F000BAF0B /* testView.xib in Resources */,
 				B59218601B3BDA0D000BAF0B /* LaunchScreen.xib in Resources */,
+				B592187F1B3C159A000BAF0B /* ViewController.xib in Resources */,
 				B592185D1B3BDA0D000BAF0B /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B59218631B3BDA0D000BAF0B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,39 +206,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B59218861B3CFBBB000BAF0B /* EasyLabel.m in Sources */,
 				B59218581B3BDA0D000BAF0B /* ViewController.m in Sources */,
+				B59218831B3CF0C5000BAF0B /* EasyUIButton.m in Sources */,
 				B59218551B3BDA0D000BAF0B /* AppDelegate.m in Sources */,
+				B59218781B3BE0FA000BAF0B /* EasyUIView.m in Sources */,
+				B59218891B3D50B7000BAF0B /* EasyTextField.m in Sources */,
+				B592187B1B3C1320000BAF0B /* testView.m in Sources */,
+				B59218901B3D5181000BAF0B /* PlaceholderTextView.m in Sources */,
+				B592188C1B3D5135000BAF0B /* EasyTextView.m in Sources */,
 				B59218521B3BDA0D000BAF0B /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B59218611B3BDA0D000BAF0B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B592186C1B3BDA0D000BAF0B /* EasyUIControlTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		B59218671B3BDA0D000BAF0B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B592184B1B3BDA0D000BAF0B /* EasyUIControl */;
-			targetProxy = B59218661B3BDA0D000BAF0B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		B59218591B3BDA0D000BAF0B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B592185A1B3BDA0D000BAF0B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B592185E1B3BDA0D000BAF0B /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -299,7 +269,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -336,7 +306,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -363,40 +333,6 @@
 			};
 			name = Release;
 		};
-		B59218731B3BDA0D000BAF0B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = EasyUIControlTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyUIControl.app/EasyUIControl";
-			};
-			name = Debug;
-		};
-		B59218741B3BDA0D000BAF0B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = EasyUIControlTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyUIControl.app/EasyUIControl";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -414,14 +350,6 @@
 			buildConfigurations = (
 				B59218701B3BDA0D000BAF0B /* Debug */,
 				B59218711B3BDA0D000BAF0B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		B59218721B3BDA0D000BAF0B /* Build configuration list for PBXNativeTarget "EasyUIControlTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B59218731B3BDA0D000BAF0B /* Debug */,
-				B59218741B3BDA0D000BAF0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

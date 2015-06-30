@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "EasyUIView.h"
 @interface ViewController : UIViewController
+
 
 
 @end
